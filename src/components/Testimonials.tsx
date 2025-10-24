@@ -122,6 +122,32 @@ const Testimonials = () => {
             </div>
           </Card>
         </div>
+
+        {/* YouTube Video Section */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
+              Watch Our <span className="text-gradient-accent">Work in Action</span>
+            </h3>
+            <p className="text-muted-foreground">
+              See our aluminum partition and false ceiling installations
+            </p>
+          </div>
+
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-strong bg-muted/50 p-2">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-xl"
+                src="https://www.youtube.com/embed/P0M8IG1Z28w?si=V5iavxvOy2qA9kjJ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
