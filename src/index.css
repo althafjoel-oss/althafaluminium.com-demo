@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 42% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 42% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 42% 18%;
+
+    /* Deep Blue - Primary Brand Color */
+    --primary: 210 42% 18%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Metallic Silver */
+    --secondary: 0 0% 75%;
+    --secondary-foreground: 210 42% 18%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Electric Blue - Accent */
+    --accent: 197 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 197 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradients for metallic effects */
+    --gradient-metallic: linear-gradient(135deg, hsl(0, 0%, 85%) 0%, hsl(0, 0%, 65%) 50%, hsl(0, 0%, 85%) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(210, 42%, 18%) 0%, hsl(210, 42%, 28%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(197, 100%, 50%) 0%, hsl(210, 100%, 60%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 0 40px rgba(0, 153, 255, 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 42% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 210 42% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 210 42% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 197 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 30%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 42% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 197 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 42% 25%;
+    --input: 210 42% 25%;
+    --ring: 197 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient-metallic {
+    background: var(--gradient-metallic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-metallic {
+    background: var(--gradient-metallic);
+  }
+
+  .bg-gradient-blue {
+    background: var(--gradient-blue);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
