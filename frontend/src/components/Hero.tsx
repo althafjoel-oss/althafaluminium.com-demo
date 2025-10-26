@@ -1,6 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-const heroBackground = "https://images.unsplash.com/photo-1637665759389-41818b867562";
+
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
@@ -19,11 +19,8 @@ const Hero = () => {
     }
   };
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Parallax Effect */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroBackground})`,
-      backgroundAttachment: "fixed"
-    }}>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-accent">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-background/90" />
       </div>
 
