@@ -1,43 +1,19 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Building2, Factory, Briefcase, Frame, Settings, Sparkles, ImagePlus } from "lucide-react";
-
-// Professional stock images for portfolio
-const portfolio1 = "https://images.unsplash.com/photo-1497366811353-6870744d04b2";
-const portfolio2 = "https://images.unsplash.com/photo-1559458049-9d62fceeb52b";
-const portfolio3 = "https://images.unsplash.com/photo-1600508773950-d522f5bb7606";
-const portfolio4 = "https://images.unsplash.com/photo-1662098963427-fe6b7724d998";
-const portfolio5 = "https://images.pexels.com/photos/4090093/pexels-photo-4090093.jpeg";
-const portfolio6 = "https://images.unsplash.com/photo-1549791084-5f78368b208b";
-const portfolio7 = "https://images.unsplash.com/photo-1578803203370-8b000b589edd";
-const portfolio8 = "https://images.pexels.com/photos/4957793/pexels-photo-4957793.jpeg";
-const portfolio9 = "https://images.unsplash.com/photo-1698241099502-309e17808bd0";
-const portfolio10 = "https://images.pexels.com/photos/15811686/pexels-photo-15811686.jpeg";
-
-// Placeholder for user's own images (to be added later)
-const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%23E5E7EB' width='800' height='600'/%3E%3Ctext fill='%236B7280' font-family='Arial, sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3EYour Image Here%3C/text%3E%3C/svg%3E";
+import { Building2, Factory, Briefcase, Frame, Settings, Sparkles } from "lucide-react";
 
 interface PortfolioItem {
   id: number;
   title: string;
   category: string;
   description: string;
-  image: string;
   icon: React.ComponentType<{ className?: string }>;
 }
 
 const PortfolioShowcase = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -62,7 +38,6 @@ const PortfolioShowcase = () => {
       title: "Modern Office Partition",
       category: "Aluminum Partitions",
       description: "Sleek aluminum partition system for corporate office spaces",
-      image: portfolio1,
       icon: Building2
     },
     {
@@ -70,7 +45,6 @@ const PortfolioShowcase = () => {
       title: "Factory False Ceiling",
       category: "Industrial Ceilings",
       description: "Heavy-duty false ceiling installation for manufacturing facility",
-      image: portfolio2,
       icon: Factory
     },
     {
@@ -78,7 +52,6 @@ const PortfolioShowcase = () => {
       title: "Executive Cabin Design",
       category: "Office Cabins",
       description: "Premium glass and aluminum executive cabin solution",
-      image: portfolio3,
       icon: Briefcase
     },
     {
@@ -86,7 +59,6 @@ const PortfolioShowcase = () => {
       title: "Glass Partition System",
       category: "Glass Partitions",
       description: "Frameless glass partition with aluminum channels",
-      image: portfolio4,
       icon: Settings
     },
     {
@@ -94,7 +66,6 @@ const PortfolioShowcase = () => {
       title: "Butterfly Louver Design",
       category: "Custom Designs",
       description: "Decorative louver partition for modern interiors",
-      image: placeholderImage,
       icon: Frame
     },
     {
@@ -102,7 +73,6 @@ const PortfolioShowcase = () => {
       title: "Commercial Space Division",
       category: "Aluminum Partitions",
       description: "Multi-zone office partition system with acoustic panels",
-      image: placeholderImage,
       icon: Building2
     },
     {
@@ -110,7 +80,6 @@ const PortfolioShowcase = () => {
       title: "Industrial Ceiling Solution",
       category: "Industrial Ceilings",
       description: "Complete false ceiling system for warehouse facility",
-      image: portfolio5,
       icon: Factory
     },
     {
@@ -118,7 +87,6 @@ const PortfolioShowcase = () => {
       title: "Bespoke Office Interior",
       category: "Custom Designs",
       description: "Fully customized aluminum interior design solution",
-      image: portfolio6,
       icon: Sparkles
     },
     {
@@ -126,7 +94,6 @@ const PortfolioShowcase = () => {
       title: "Conference Room Partition",
       category: "Office Cabins",
       description: "Soundproof partition system for meeting rooms",
-      image: portfolio7,
       icon: Briefcase
     },
     {
@@ -134,7 +101,6 @@ const PortfolioShowcase = () => {
       title: "Contemporary Glass Walls",
       category: "Glass Partitions",
       description: "Floor-to-ceiling glass partition with minimal frames",
-      image: portfolio8,
       icon: Settings
     },
     {
@@ -142,7 +108,6 @@ const PortfolioShowcase = () => {
       title: "Open Office Layout",
       category: "Aluminum Partitions",
       description: "Flexible partition system for collaborative workspaces",
-      image: placeholderImage,
       icon: Building2
     },
     {
@@ -150,56 +115,7 @@ const PortfolioShowcase = () => {
       title: "High-Bay Ceiling System",
       category: "Industrial Ceilings",
       description: "Specialized false ceiling for high-ceiling industrial spaces",
-      image: placeholderImage,
       icon: Factory
-    },
-    {
-      id: 13,
-      title: "Modular Office Cabin",
-      category: "Office Cabins",
-      description: "Pre-fabricated aluminum cabin for quick installation",
-      image: portfolio9,
-      icon: Briefcase
-    },
-    {
-      id: 14,
-      title: "Privacy Glass Solution",
-      category: "Glass Partitions",
-      description: "Smart glass partition with privacy control",
-      image: placeholderImage,
-      icon: Settings
-    },
-    {
-      id: 15,
-      title: "Architectural Feature Wall",
-      category: "Custom Designs",
-      description: "Designer aluminum feature wall with custom patterns",
-      image: placeholderImage,
-      icon: Sparkles
-    },
-    {
-      id: 16,
-      title: "Corporate Headquarters",
-      category: "Aluminum Partitions",
-      description: "Complete aluminum partition system for HQ building",
-      image: portfolio10,
-      icon: Building2
-    },
-    {
-      id: 17,
-      title: "Clean Room Ceiling",
-      category: "Industrial Ceilings",
-      description: "Hygienic false ceiling for pharmaceutical facility",
-      image: placeholderImage,
-      icon: Factory
-    },
-    {
-      id: 18,
-      title: "Executive Suite",
-      category: "Office Cabins",
-      description: "Luxury cabin design with premium finishes",
-      image: placeholderImage,
-      icon: Briefcase
     }
   ];
 
@@ -217,16 +133,14 @@ const PortfolioShowcase = () => {
   const itemVariants = {
     hidden: {
       opacity: 0,
-      y: 50,
-      scale: 0.9
+      y: 30
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        duration: 0.5,
+        ease: "easeOut"
       }
     }
   };
@@ -243,51 +157,38 @@ const PortfolioShowcase = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         whileHover={{
-          scale: 1.05,
-          transition: { duration: 0.3 }
+          scale: 1.03,
+          transition: { duration: 0.2 }
         }}
         className="relative"
       >
-        <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer h-full">
-          <div className="relative h-80 overflow-hidden">
-            <motion.img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-cover"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            />
+        <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-300 cursor-pointer h-full">
+          <div className="relative h-80 overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-accent/20">
+            {/* Icon Display */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Icon className="w-24 h-24 text-primary/40" />
+              </motion.div>
+            </div>
 
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent"
-              initial={{ opacity: 0.7 }}
-              whileHover={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
 
-            <motion.div
-              className="absolute inset-0 p-6 flex flex-col justify-end"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: index * 0.05 }}
-            >
+            <div className="absolute inset-0 p-6 flex flex-col justify-end">
               <motion.div
                 className="bg-accent/20 backdrop-blur-sm rounded-full w-14 h-14 flex items-center justify-center mb-4"
                 whileHover={{
                   scale: 1.2,
-                  rotate: 360,
                   backgroundColor: "rgba(var(--accent), 0.3)"
                 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.3 }}
               >
                 <Icon className="w-7 h-7 text-accent" />
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-              >
+              <div>
                 <p className="text-accent text-xs font-semibold uppercase tracking-wider mb-2">
                   {item.category}
                 </p>
@@ -297,15 +198,10 @@ const PortfolioShowcase = () => {
                 <p className="text-white/90 text-sm leading-relaxed">
                   {item.description}
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="mt-4 w-12 h-1 bg-accent rounded-full"
-                initial={{ width: 0 }}
-                whileInView={{ width: 48 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              />
-            </motion.div>
+              <div className="mt-4 w-12 h-1 bg-accent rounded-full" />
+            </div>
           </div>
         </Card>
       </motion.div>
@@ -318,51 +214,29 @@ const PortfolioShowcase = () => {
       id="portfolio"
       className="py-20 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden"
     >
-      <motion.div
-        className="absolute inset-0 opacity-5"
-        style={{ y }}
-      >
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
-      </motion.div>
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, type: "spring" }}
-          >
-            <h2 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-4">
-              Our Recent <span className="text-gradient-accent">Projects</span>
-            </h2>
-          </motion.div>
+          <h2 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-4">
+            Our Recent <span className="text-gradient-accent">Projects</span>
+          </h2>
 
-          <motion.div
-            className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          />
+          <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
 
-          <motion.p
-            className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-          >
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Discover our portfolio of aluminum partition systems, false ceiling installations,
             glass partitions, and custom office solutions delivered across diverse industries
-          </motion.p>
+          </p>
         </motion.div>
 
         <motion.div
@@ -381,21 +255,17 @@ const PortfolioShowcase = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.3 }}
         >
-          <motion.p
-            className="text-lg text-muted-foreground mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
+          <p className="text-lg text-muted-foreground mb-6">
             Want to see more of our work?
-          </motion.p>
+          </p>
 
           <motion.a
             href="/portfolio"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-primary hover:bg-primary/90 rounded-full shadow-strong transition-all duration-300"
             whileHover={{
-              scale: 1.1,
-              boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
+              scale: 1.05
             }}
             whileTap={{ scale: 0.95 }}
           >
