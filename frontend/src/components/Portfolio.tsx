@@ -63,10 +63,7 @@ const Portfolio = () => {
     icon: Sparkles
   }];
   const galleryImages = [
-    recentPhoto1,
-    recentPhoto3,
-    recentPhoto4,
-    recentPhoto5,
+    // Professional stock images for display
     portfolio1,
     portfolio2,
     portfolio3,
@@ -77,25 +74,6 @@ const Portfolio = () => {
     portfolio8,
     portfolio9,
     portfolio10,
-    newPhoto1,
-    newPhoto2,
-    newPhoto3,
-    newPhoto4,
-    newPhoto5,
-    newPhoto6,
-    newPhoto7,
-    newPhoto8,
-    newPhoto9,
-    newPhoto10,
-    newPhoto11,
-    newPhoto12,
-    newPhoto13,
-    newPhoto14,
-    newPhoto15,
-    newPhoto16,
-    newPhoto17,
-    newPhoto18,
-    newPhoto19,
     project1,
     project2,
     project3,
@@ -104,7 +82,29 @@ const Portfolio = () => {
     serviceCeiling,
     serviceGlass,
     servicePartitions,
-    factoryCeiling
+    factoryCeiling,
+    butterflyLouver,
+    // Placeholder spaces for user's own images (20 placeholder spots)
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage,
+    placeholderImage
   ];
   const handleWhatsApp = () => {
     window.open('https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
