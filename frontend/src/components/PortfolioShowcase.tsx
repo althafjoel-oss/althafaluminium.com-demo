@@ -1,25 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Building2, Factory, Briefcase, Frame, Settings, Sparkles } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
-import portfolio7 from "@/assets/portfolio-7.jpg";
-import portfolio8 from "@/assets/portfolio-8.jpg";
-import portfolio9 from "@/assets/portfolio-9.jpg";
-import portfolio10 from "@/assets/portfolio-10.jpg";
-import newPhoto1 from "@/assets/IMG-20251018-WA0083.jpg";
-import newPhoto2 from "@/assets/IMG-20251018-WA0085.jpg";
-import newPhoto3 from "@/assets/IMG-20251018-WA0088.jpg";
-import newPhoto4 from "@/assets/IMG-20251018-WA0086.jpg";
-import newPhoto5 from "@/assets/IMG-20251018-WA0087.jpg";
-import newPhoto6 from "@/assets/IMG-20251018-WA0089.jpg";
-import recentPhoto1 from "@/assets/IMG-20251021-WA0030.jpg";
-import recentPhoto3 from "@/assets/IMG-20251021-WA0041.jpg";
+import { Building2, Factory, Briefcase, Frame, Settings, Sparkles, ImagePlus } from "lucide-react";
+
+// Professional stock images for portfolio
+const portfolio1 = "https://images.unsplash.com/photo-1497366811353-6870744d04b2";
+const portfolio2 = "https://images.unsplash.com/photo-1559458049-9d62fceeb52b";
+const portfolio3 = "https://images.unsplash.com/photo-1600508773950-d522f5bb7606";
+const portfolio4 = "https://images.unsplash.com/photo-1662098963427-fe6b7724d998";
+const portfolio5 = "https://images.pexels.com/photos/4090093/pexels-photo-4090093.jpeg";
+const portfolio6 = "https://images.unsplash.com/photo-1549791084-5f78368b208b";
+const portfolio7 = "https://images.unsplash.com/photo-1578803203370-8b000b589edd";
+const portfolio8 = "https://images.pexels.com/photos/4957793/pexels-photo-4957793.jpeg";
+const portfolio9 = "https://images.unsplash.com/photo-1698241099502-309e17808bd0";
+const portfolio10 = "https://images.pexels.com/photos/15811686/pexels-photo-15811686.jpeg";
+
+// Placeholder for user's own images (to be added later)
+const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%23E5E7EB' width='800' height='600'/%3E%3Ctext fill='%236B7280' font-family='Arial, sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3EYour Image Here%3C/text%3E%3C/svg%3E";
 
 interface PortfolioItem {
   id: number;
