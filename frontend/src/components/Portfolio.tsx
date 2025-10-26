@@ -141,9 +141,64 @@ const Portfolio = () => {
       {/* Project Gallery Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              Our <span className="text-gradient-accent">Portfolio</span>
+            </h2>
+            <div className="w-20 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore our completed projects across diverse industries
+            </p>
+          </motion.div>
 
-          <ParallaxScroll images={galleryImages} />
+          {/* Portfolio Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioProjects.map((project, index) => {
+              const Icon = project.icon;
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                >
+                  <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-300 cursor-pointer h-full">
+                    <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10">
+                      {/* Icon Display */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Icon className="w-16 h-16 text-primary/30 group-hover:text-accent/50 transition-colors" />
+                        </motion.div>
+                      </div>
+                      
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                      <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                          <p className="text-accent text-xs font-semibold uppercase tracking-wider mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            {project.category}
+                          </p>
+                          <h3 className="text-white text-xl font-heading font-semibold leading-tight">
+                            {project.title}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
 
           <motion.div initial={{
           opacity: 0,
@@ -154,13 +209,12 @@ const Portfolio = () => {
         }} viewport={{
           once: true
         }} transition={{
-          duration: 0.6,
+          duration: 0.5,
           delay: 0.3
         }} className="text-center mt-12">
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full shadow-soft hover:shadow-strong hover:scale-105 transition-all duration-300">
-              View Full Photo Gallery
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <p className="text-lg text-muted-foreground mb-4">
+              Add your own project images to showcase your work
+            </p>
           </motion.div>
         </div>
       </section>
