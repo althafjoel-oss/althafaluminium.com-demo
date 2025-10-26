@@ -6,78 +6,41 @@ const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
     description: "Modern aluminum partition systems for offices and commercial spaces",
-    image: servicePartitions,
     icon: Building2
   }, {
     title: "Factory False Ceilings",
     description: "Industrial-grade false ceiling solutions for manufacturing facilities",
-    image: factoryCeiling,
     icon: Factory
   }, {
     title: "Office Partitions",
     description: "Professional workspace divisions with soundproof and glass options",
-    image: serviceCabin,
     icon: Briefcase
   }, {
     title: "Butterfly Louver Partition",
     description: "Decorative room divider with horizontal louvers for light flow and stylish separation",
-    image: butterflyLouver,
     icon: Frame
   }, {
     title: "Glass Partition",
     description: "Premium tempered glass partitions with sleek aluminum frames for modern offices",
-    image: serviceGlass,
     icon: Settings
   }, {
     title: "Custom Designs",
     description: "Bespoke aluminum solutions tailored to your unique requirements",
-    image: servicePartitions,
     icon: Sparkles
   }];
-  const galleryImages = [
-    // Professional stock images for display
-    portfolio1,
-    portfolio2,
-    portfolio3,
-    portfolio4,
-    portfolio5,
-    portfolio6,
-    portfolio7,
-    portfolio8,
-    portfolio9,
-    portfolio10,
-    project1,
-    project2,
-    project3,
-    aboutOfficePartition,
-    serviceCabin,
-    serviceCeiling,
-    serviceGlass,
-    servicePartitions,
-    factoryCeiling,
-    butterflyLouver,
-    // Placeholder spaces for user's own images (20 placeholder spots)
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage,
-    placeholderImage
+  
+  const portfolioProjects = [
+    { id: 1, title: "Corporate Office Renovation", category: "Aluminum Partitions", icon: Building2 },
+    { id: 2, title: "Manufacturing Facility", category: "Factory Ceilings", icon: Factory },
+    { id: 3, title: "Executive Suite Design", category: "Office Cabins", icon: Briefcase },
+    { id: 4, title: "Glass Wall Installation", category: "Glass Partitions", icon: Settings },
+    { id: 5, title: "Modern Workspace", category: "Aluminum Partitions", icon: Building2 },
+    { id: 6, title: "Commercial Complex", category: "Custom Designs", icon: Sparkles },
+    { id: 7, title: "Industrial Ceiling", category: "Factory Ceilings", icon: Factory },
+    { id: 8, title: "Conference Room", category: "Glass Partitions", icon: Settings },
+    { id: 9, title: "Open Office Layout", category: "Aluminum Partitions", icon: Building2 },
   ];
+
   const handleWhatsApp = () => {
     window.open('https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
   };
