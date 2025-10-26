@@ -231,7 +231,7 @@ const Portfolio = () => {
         }} viewport={{
           once: true
         }} transition={{
-          duration: 0.6
+          duration: 0.5
         }} className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
               Ready to Start Your <span className="text-gradient-accent">Project?</span>
@@ -239,10 +239,15 @@ const Portfolio = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               Get in touch with us today and let's bring your vision to life with premium aluminum solutions
             </p>
-            <Button onClick={handleWhatsApp} size="lg" className="text-lg px-8 py-6 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-strong hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 hover:rotate-1 hover:-translate-y-1">
+            <motion.button
+              onClick={handleWhatsApp}
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-green-600 hover:bg-green-700 text-white shadow-strong transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Contact Us on WhatsApp
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </motion.button>
           </motion.div>
         </div>
       </section>
