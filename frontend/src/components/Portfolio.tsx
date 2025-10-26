@@ -3,49 +3,33 @@ import { Building2, Factory, Briefcase, Frame, Settings, Sparkles, ArrowRight } 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
-import serviceCabin from "@/assets/service-cabin.jpg";
-import serviceCeiling from "@/assets/service-ceiling.jpg";
-import serviceGlass from "@/assets/service-glass.jpg";
-import servicePartitions from "@/assets/service-partitions.jpg";
-import factoryCeiling from "@/assets/IMG-20251018-WA0076.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/office-partition-modern.png";
-import project3 from "@/assets/project-3.jpg";
-import aboutOfficePartition from "@/assets/about-office-partition.jpg";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
-import portfolio7 from "@/assets/portfolio-7.jpg";
-import portfolio8 from "@/assets/portfolio-8.jpg";
-import portfolio9 from "@/assets/portfolio-9.jpg";
-import portfolio10 from "@/assets/portfolio-10.jpg";
-import newPhoto1 from "@/assets/IMG-20251018-WA0083.jpg";
-import newPhoto2 from "@/assets/IMG-20251018-WA0085.jpg";
-import newPhoto3 from "@/assets/IMG-20251018-WA0088.jpg";
-import newPhoto4 from "@/assets/IMG-20251018-WA0086.jpg";
-import newPhoto5 from "@/assets/IMG-20251018-WA0087.jpg";
-import newPhoto6 from "@/assets/IMG-20251018-WA0089.jpg";
-import newPhoto7 from "@/assets/IMG-20251018-WA0084.jpg";
-import newPhoto8 from "@/assets/WhatsApp Image 2025-10-18 at 22.23.58_f144f512.jpg";
-import newPhoto9 from "@/assets/IMG-20251018-WA0015.jpg";
-import newPhoto10 from "@/assets/IMG-20251020-WA0019.jpg";
-import newPhoto11 from "@/assets/IMG-20251020-WA0020.jpg";
-import newPhoto12 from "@/assets/IMG-20251020-WA0024.jpg";
-import newPhoto13 from "@/assets/IMG-20251020-WA0025.jpg";
-import newPhoto14 from "@/assets/IMG-20251020-WA0031.jpg";
-import newPhoto15 from "@/assets/IMG-20251020-WA0032.jpg";
-import newPhoto16 from "@/assets/IMG-20251020-WA0034.jpg";
-import newPhoto17 from "@/assets/IMG-20251020-WA0044.jpg";
-import newPhoto18 from "@/assets/IMG-20251018-WA0003.jpg";
-import newPhoto19 from "@/assets/IMG-20251018-WA0008.jpg";
-import recentPhoto1 from "@/assets/IMG-20251021-WA0030.jpg";
-import recentPhoto3 from "@/assets/IMG-20251021-WA0041.jpg";
-import recentPhoto4 from "@/assets/IMG-20251021-WA0042.jpg";
-import recentPhoto5 from "@/assets/IMG-20251021-WA0044.jpg";
-import butterflyLouver from "@/assets/IMG-20251021-WA0030 copy.jpg";
+
+// Professional stock images
+const serviceCabin = "https://images.unsplash.com/photo-1715593949273-09009558300a";
+const serviceCeiling = "https://images.unsplash.com/photo-1482731215275-a1f151646268";
+const serviceGlass = "https://images.unsplash.com/photo-1600421857173-26a9c994d27c";
+const servicePartitions = "https://images.unsplash.com/photo-1497366754035-f200968a6e72";
+const factoryCeiling = "https://images.pexels.com/photos/15811686/pexels-photo-15811686.jpeg";
+const project1 = "https://images.unsplash.com/photo-1559458049-9d62fceeb52b";
+const project2 = "https://images.unsplash.com/photo-1549791084-5f78368b208b";
+const project3 = "https://images.unsplash.com/photo-1578803203370-8b000b589edd";
+const aboutOfficePartition = "https://images.unsplash.com/photo-1495576775051-8af0d10f19b1";
+const butterflyLouver = "https://images.unsplash.com/photo-1497366811353-6870744d04b2";
+
+// Portfolio images
+const portfolio1 = "https://images.unsplash.com/photo-1497366811353-6870744d04b2";
+const portfolio2 = "https://images.unsplash.com/photo-1559458049-9d62fceeb52b";
+const portfolio3 = "https://images.unsplash.com/photo-1600508773950-d522f5bb7606";
+const portfolio4 = "https://images.unsplash.com/photo-1662098963427-fe6b7724d998";
+const portfolio5 = "https://images.pexels.com/photos/4090093/pexels-photo-4090093.jpeg";
+const portfolio6 = "https://images.unsplash.com/photo-1549791084-5f78368b208b";
+const portfolio7 = "https://images.unsplash.com/photo-1578803203370-8b000b589edd";
+const portfolio8 = "https://images.pexels.com/photos/4957793/pexels-photo-4957793.jpeg";
+const portfolio9 = "https://images.unsplash.com/photo-1698241099502-309e17808bd0";
+const portfolio10 = "https://images.pexels.com/photos/15811686/pexels-photo-15811686.jpeg";
+
+// Placeholder for user's own images (blank spaces for them to add later)
+const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%23E5E7EB' width='800' height='600'/%3E%3Ctext fill='%236B7280' font-family='Arial, sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3EAdd Your Image Here%3C/text%3E%3C/svg%3E";
 const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
