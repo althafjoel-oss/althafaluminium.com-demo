@@ -1,35 +1,7 @@
 import { motion } from "framer-motion";
 import { Building2, Factory, Briefcase, Frame, Settings, Sparkles, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 
-// Professional stock images
-const serviceCabin = "https://images.unsplash.com/photo-1715593949273-09009558300a";
-const serviceCeiling = "https://images.unsplash.com/photo-1482731215275-a1f151646268";
-const serviceGlass = "https://images.unsplash.com/photo-1600421857173-26a9c994d27c";
-const servicePartitions = "https://images.unsplash.com/photo-1497366754035-f200968a6e72";
-const factoryCeiling = "https://images.pexels.com/photos/15811686/pexels-photo-15811686.jpeg";
-const project1 = "https://images.unsplash.com/photo-1559458049-9d62fceeb52b";
-const project2 = "https://images.unsplash.com/photo-1549791084-5f78368b208b";
-const project3 = "https://images.unsplash.com/photo-1578803203370-8b000b589edd";
-const aboutOfficePartition = "https://images.unsplash.com/photo-1495576775051-8af0d10f19b1";
-const butterflyLouver = "https://images.unsplash.com/photo-1497366811353-6870744d04b2";
-
-// Portfolio images
-const portfolio1 = "https://images.unsplash.com/photo-1497366811353-6870744d04b2";
-const portfolio2 = "https://images.unsplash.com/photo-1559458049-9d62fceeb52b";
-const portfolio3 = "https://images.unsplash.com/photo-1600508773950-d522f5bb7606";
-const portfolio4 = "https://images.unsplash.com/photo-1662098963427-fe6b7724d998";
-const portfolio5 = "https://images.pexels.com/photos/4090093/pexels-photo-4090093.jpeg";
-const portfolio6 = "https://images.unsplash.com/photo-1549791084-5f78368b208b";
-const portfolio7 = "https://images.unsplash.com/photo-1578803203370-8b000b589edd";
-const portfolio8 = "https://images.pexels.com/photos/4957793/pexels-photo-4957793.jpeg";
-const portfolio9 = "https://images.unsplash.com/photo-1698241099502-309e17808bd0";
-const portfolio10 = "https://images.pexels.com/photos/15811686/pexels-photo-15811686.jpeg";
-
-// Placeholder for user's own images (blank spaces for them to add later)
-const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%23E5E7EB' width='800' height='600'/%3E%3Ctext fill='%236B7280' font-family='Arial, sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3EAdd Your Image Here%3C/text%3E%3C/svg%3E";
 const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
