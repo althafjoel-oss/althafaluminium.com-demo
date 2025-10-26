@@ -1,42 +1,3 @@
-/**
- * PORTFOLIO COMPONENT - Optimized for Scroll Animations & Responsive Design
- *
- * KEY IMPROVEMENTS:
- * 1. Larger photo containers (500px height) - prevents image cropping
- * 2. Smooth scroll-triggered animations with Framer Motion
- * 3. Fully responsive across mobile, tablet, and desktop
- * 4. Performance optimized with lazy loading and GPU acceleration
- * 5. Interactive hover effects and parallax scrolling
- *
- * CUSTOMIZATION GUIDE:
- *
- * Photo Container Size (Line 239):
- * - Current: imageHeight="h-[500px]" (500px tall containers)
- * - Smaller: imageHeight="h-96" (384px)
- * - Larger: imageHeight="h-[600px]" (600px)
- * - Extra Large: imageHeight="h-[700px]" (700px)
- *
- * Spacing Between Photos (Line 240):
- * - Current: gap="gap-10" (40px spacing)
- * - Less space: gap="gap-6" (24px)
- * - More space: gap="gap-12" (48px)
- *
- * Animation Speed:
- * - Edit src/components/ui/parallax-scroll.tsx lines 47-49
- * - Slower: [0, -100], [0, 100], [0, -50]
- * - Faster: [0, -300], [0, 300], [0, -150]
- *
- * Scroll Trigger Point:
- * - Edit src/components/ui/parallax-scroll.tsx line 44
- * - Start earlier: ["start end", "end start"]
- * - Start later: ["start center", "end start"]
- *
- * DEPENDENCIES:
- * - framer-motion (already installed)
- * - tailwindcss (already configured)
- * - No additional packages needed
- */
-
 import { motion } from "framer-motion";
 import { Building2, Factory, Briefcase, Frame, Settings, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -253,31 +214,9 @@ const Portfolio = () => {
       {/* Project Gallery Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6
-        }} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              Complete <span className="text-gradient-accent">Photo Gallery</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Browse through our extensive collection of completed projects and installations
-            </p>
-          </motion.div>
+          
 
-          <ParallaxScroll
-            images={galleryImages}
-            imageHeight="h-[500px]"
-            gap="gap-10"
-          />
+          <ParallaxScroll images={galleryImages} />
 
           <motion.div initial={{
           opacity: 0,
