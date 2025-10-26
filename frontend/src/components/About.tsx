@@ -1,5 +1,5 @@
 import { Award, Users, Clock, Target } from "lucide-react";
-import aboutOfficePartition from "@/assets/about-office-partition.jpg";
+const aboutOfficePartition = "https://images.unsplash.com/photo-1495576775051-8af0d10f19b1";
 
 const About = () => {
   const stats = [
