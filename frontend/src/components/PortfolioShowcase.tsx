@@ -94,7 +94,7 @@ const PortfolioShowcase = () => {
       title: "Butterfly Louver Design",
       category: "Custom Designs",
       description: "Decorative louver partition for modern interiors",
-      image: recentPhoto1,
+      image: placeholderImage,
       icon: Frame
     },
     {
@@ -102,7 +102,7 @@ const PortfolioShowcase = () => {
       title: "Commercial Space Division",
       category: "Aluminum Partitions",
       description: "Multi-zone office partition system with acoustic panels",
-      image: newPhoto1,
+      image: placeholderImage,
       icon: Building2
     },
     {
@@ -110,7 +110,7 @@ const PortfolioShowcase = () => {
       title: "Industrial Ceiling Solution",
       category: "Industrial Ceilings",
       description: "Complete false ceiling system for warehouse facility",
-      image: newPhoto2,
+      image: portfolio5,
       icon: Factory
     },
     {
@@ -118,7 +118,7 @@ const PortfolioShowcase = () => {
       title: "Bespoke Office Interior",
       category: "Custom Designs",
       description: "Fully customized aluminum interior design solution",
-      image: newPhoto3,
+      image: portfolio6,
       icon: Sparkles
     },
     {
@@ -126,7 +126,7 @@ const PortfolioShowcase = () => {
       title: "Conference Room Partition",
       category: "Office Cabins",
       description: "Soundproof partition system for meeting rooms",
-      image: portfolio5,
+      image: portfolio7,
       icon: Briefcase
     },
     {
@@ -134,7 +134,7 @@ const PortfolioShowcase = () => {
       title: "Contemporary Glass Walls",
       category: "Glass Partitions",
       description: "Floor-to-ceiling glass partition with minimal frames",
-      image: portfolio6,
+      image: portfolio8,
       icon: Settings
     },
     {
@@ -142,7 +142,7 @@ const PortfolioShowcase = () => {
       title: "Open Office Layout",
       category: "Aluminum Partitions",
       description: "Flexible partition system for collaborative workspaces",
-      image: newPhoto4,
+      image: placeholderImage,
       icon: Building2
     },
     {
@@ -150,7 +150,7 @@ const PortfolioShowcase = () => {
       title: "High-Bay Ceiling System",
       category: "Industrial Ceilings",
       description: "Specialized false ceiling for high-ceiling industrial spaces",
-      image: newPhoto5,
+      image: placeholderImage,
       icon: Factory
     },
     {
@@ -158,7 +158,7 @@ const PortfolioShowcase = () => {
       title: "Modular Office Cabin",
       category: "Office Cabins",
       description: "Pre-fabricated aluminum cabin for quick installation",
-      image: portfolio7,
+      image: portfolio9,
       icon: Briefcase
     },
     {
@@ -166,7 +166,7 @@ const PortfolioShowcase = () => {
       title: "Privacy Glass Solution",
       category: "Glass Partitions",
       description: "Smart glass partition with privacy control",
-      image: recentPhoto3,
+      image: placeholderImage,
       icon: Settings
     },
     {
@@ -174,7 +174,7 @@ const PortfolioShowcase = () => {
       title: "Architectural Feature Wall",
       category: "Custom Designs",
       description: "Designer aluminum feature wall with custom patterns",
-      image: newPhoto6,
+      image: placeholderImage,
       icon: Sparkles
     },
     {
@@ -182,7 +182,7 @@ const PortfolioShowcase = () => {
       title: "Corporate Headquarters",
       category: "Aluminum Partitions",
       description: "Complete aluminum partition system for HQ building",
-      image: portfolio8,
+      image: portfolio10,
       icon: Building2
     },
     {
@@ -190,7 +190,7 @@ const PortfolioShowcase = () => {
       title: "Clean Room Ceiling",
       category: "Industrial Ceilings",
       description: "Hygienic false ceiling for pharmaceutical facility",
-      image: portfolio9,
+      image: placeholderImage,
       icon: Factory
     },
     {
@@ -198,7 +198,7 @@ const PortfolioShowcase = () => {
       title: "Executive Suite",
       category: "Office Cabins",
       description: "Luxury cabin design with premium finishes",
-      image: portfolio10,
+      image: placeholderImage,
       icon: Briefcase
     }
   ];
