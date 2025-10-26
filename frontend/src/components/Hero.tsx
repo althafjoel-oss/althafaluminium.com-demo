@@ -1,6 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background.jpg";
+const heroBackground = "https://images.unsplash.com/photo-1637665759389-41818b867562";
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
