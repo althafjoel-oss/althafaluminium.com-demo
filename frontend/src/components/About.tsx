@@ -1,5 +1,4 @@
 import { Award, Users, Clock, Target } from "lucide-react";
-const aboutOfficePartition = "https://images.unsplash.com/photo-1495576775051-8af0d10f19b1";
 
 const About = () => {
   const stats = [
@@ -29,15 +28,20 @@ const About = () => {
     <section id="about" className="py-20 bg-muted">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image Side */}
+          {/* Visual Side - Decorative Element */}
           <div className="relative animate-fade-in">
-            <div className="relative rounded-2xl overflow-hidden shadow-strong">
-              <img
-                src={aboutOfficePartition}
-                alt="Modern aluminum office partition installation by Althaf Aluminium"
-                className="w-full h-[500px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent" />
+            <div className="relative rounded-2xl overflow-hidden shadow-strong bg-gradient-to-br from-primary/20 to-accent/20 h-[500px] flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-accent flex items-center justify-center">
+                  <Award className="w-16 h-16 text-white" />
+                </div>
+                <h3 className="text-3xl font-heading font-bold text-foreground mb-2">
+                  Quality Excellence
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  Delivering premium aluminum solutions
+                </p>
+              </div>
             </div>
             
             {/* Decorative Element */}
