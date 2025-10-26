@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
-import servicePartitions from "@/assets/service-partitions.jpg";
-import serviceCeiling from "@/assets/service-ceiling.jpg";
-import serviceGlass from "@/assets/service-glass.jpg";
-import serviceCabin from "@/assets/service-cabin.jpg";
+const servicePartitions = "https://images.unsplash.com/photo-1497366754035-f200968a6e72";
+const serviceCeiling = "https://images.unsplash.com/photo-1482731215275-a1f151646268";
+const serviceGlass = "https://images.unsplash.com/photo-1600421857173-26a9c994d27c";
+const serviceCabin = "https://images.unsplash.com/photo-1715593949273-09009558300a";
 
 const Services = () => {
   const services = [
