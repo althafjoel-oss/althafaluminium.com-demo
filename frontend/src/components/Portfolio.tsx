@@ -103,13 +103,21 @@ const Portfolio = () => {
             }} viewport={{
               once: true
             }} transition={{
-              duration: 0.5,
+              duration: 0.4,
               delay: index * 0.1
             }}>
-                  <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer h-full">
-                    <div className="relative h-64 md:h-80 overflow-hidden">
-                      <img src={category.image} alt={category.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                  <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-300 cursor-pointer h-full">
+                    <div className="relative h-64 md:h-80 overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-accent/20">
+                      {/* Icon Display */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Icon className="w-16 h-16 md:w-20 md:h-20 text-primary/40" />
+                        </motion.div>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                       
                       <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end">
                         <div className="bg-accent/20 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">
